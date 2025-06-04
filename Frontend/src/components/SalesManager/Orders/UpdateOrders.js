@@ -25,7 +25,7 @@ const UpdateOrders = () => {
           <label
             htmlFor="location"
             className="block text-sm font-medium text-gray-700">
-            Update Order
+            Cập nhật đơn hàng
           </label>
           <select
             id="location"
@@ -34,9 +34,9 @@ const UpdateOrders = () => {
             value={order.status}
             className="mt-1 block w-full rounded-md border-2 border-gray-300 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
             defaultValue="Canada">
-            <option value="processing">Processing</option>
-            <option value="in-transit">In Transit</option>
-            <option value="delivered">Delivered</option>
+            <option value="processing">Xử lý</option>
+            <option value="in-transit">Đang giao hàng </option>
+            <option value="delivered">Đã giao hàng</option>
           </select>
         </div>
       </div>

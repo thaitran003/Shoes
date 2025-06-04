@@ -25,7 +25,7 @@ export default function Customers() {
       <div className="sm:flex sm:items-center"></div>
 
       <h3 className="text-lg font-medium leading-6 text-gray-900 mt-3">
-        All Customers [{uniqueCustomers?.length}]
+       Tất cả người dùng [{uniqueCustomers?.length}]
       </h3>
       <div className="-mx-4 mt-3  overflow-hidden shadow ring-1 ring-black ring-opacity-5 sm:-mx-6 md:mx-0 md:rounded-lg">
         {loading ? (
@@ -39,7 +39,7 @@ export default function Customers() {
                 <th
                   scope="col"
                   className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">
-                  Full Name
+                  Tên đầy đủ
                 </th>
                 <th
                   scope="col"
@@ -49,12 +49,12 @@ export default function Customers() {
                 <th
                   scope="col"
                   className="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 sm:table-cell">
-                  Country
+                  Quốc gia
                 </th>
                 <th
                   scope="col"
                   className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                  City
+                  Thành phố
                 </th>
                 <th
                   scope="col"

@@ -26,10 +26,10 @@ export default function ManageCategories() {
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
           <h1 className="text-xl font-semibold text-gray-900">
-            All Categories
+           Tất cả danh mục
           </h1>
           <p className="mt-2 text-sm text-gray-700">
-            A list of all the users in your account including their name, title,
+             Danh sách tất cả người dùng trong tài khoản của bạn bao gồm tên, chức danh,
           </p>
         </div>
         <div className="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
@@ -37,7 +37,7 @@ export default function ManageCategories() {
             to="/admin/add-category"
             type="button"
             className="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">
-            Add New Category
+            Thêm mới danh mục
           </Link>
         </div>
       </div>
@@ -58,18 +58,18 @@ export default function ManageCategories() {
                       <th
                         scope="col"
                         className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">
-                        Name
+                        Tên
                       </th>
                       <th
                         scope="col"
                         className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                        No. Products
+                        Không có sản phẩm
                       </th>
 
                       <th
                         scope="col"
                         className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                        Created At
+                        Tạo lúc
                       </th>
                     </tr>
                   </thead>

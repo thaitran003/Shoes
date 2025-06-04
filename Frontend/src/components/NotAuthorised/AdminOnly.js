@@ -15,14 +15,14 @@ export default function AdminOnly() {
             <div className="text-center">
               <p className="text-base font-semibold text-indigo-600">404</p>
               <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                Sorry, operation not allowed
+                Xin lỗi, hoạt động không được phép
               </h1>
-              <p className="mt-2 text-base text-gray-500">Admin Only</p>
+              <p className="mt-2 text-base text-gray-500">Chỉ dành cho quản trị viên</p>
               <div className="mt-6">
                 <Link
                   to="/login"
                   className="text-base font-medium text-indigo-600 hover:text-indigo-500">
-                  Go Home
+                 Trở về trang chủ
                   <span aria-hidden="true"> &rarr;</span>
                 </Link>
               </div>

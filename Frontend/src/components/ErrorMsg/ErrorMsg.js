@@ -7,7 +7,7 @@ const ErrorMsg = ({ message }) => {
   const dispatch = useDispatch();
   Swal.fire({
     icon: "error",
-    title: "Oops...",
+    title: "Có lỗi xảy ra",
     text: message,
   });
   dispatch(resetErrAction());

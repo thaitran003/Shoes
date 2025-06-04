@@ -34,7 +34,7 @@ export default function OrdersStats() {
               </svg>
             </div>
             <p className="ml-16 truncate text-sm font-medium text-gray-200">
-              Today's Sales
+              Khuyến mại hôm nay
             </p>
           </dt>
           <dd className="ml-16 flex items-baseline pb-6 sm:pb-7">
@@ -65,7 +65,7 @@ export default function OrdersStats() {
               </svg>
             </div>
             <p className="ml-16 truncate text-sm font-medium text-gray-100">
-              Minimum Order
+              Đơn hàng tối thiểu
             </p>
           </dt>
           <dd className="ml-16 flex items-baseline pb-6 sm:pb-7">
@@ -96,7 +96,7 @@ export default function OrdersStats() {
               </svg>
             </div>
             <p className="ml-16 truncate text-sm font-medium text-gray-200">
-              Maximum Oder
+              Đơn hàng tối đa
             </p>
           </dt>
           <dd className="ml-16 flex items-baseline pb-6 sm:pb-7">
@@ -127,7 +127,7 @@ export default function OrdersStats() {
               </svg>
             </div>
             <p className="ml-16 truncate text-sm font-medium text-gray-200">
-              Total Sales
+              Tổng doanh số
             </p>
           </dt>
           <dd className="ml-16 flex items-baseline pb-6 sm:pb-7">

@@ -113,7 +113,7 @@ const ChartComponent = () => {
     <Wrapper>
       <Card>
         <Divider>
-          <Label>Start Date</Label> 
+          <Label>Ngày bắt đầu</Label> 
           <DatePicker 
             selected={startDate} 
             onChange={(date) => setStartDate(date)}  
@@ -123,7 +123,7 @@ const ChartComponent = () => {
         </Divider>
 
         <Divider>  
-          <Label>End Date</Label>
+          <Label>Ngày kết thúc</Label>
           <DatePicker
             selected={endDate}  
             onChange={(date) => setEndDate(date)}    
@@ -132,7 +132,7 @@ const ChartComponent = () => {
           />
         </Divider>
         
-        <Button onClick={() => chartClickHandler()}>Draw Chart</Button>
+        <Button onClick={() => chartClickHandler()}>Vẽ biểu đồ</Button>
         {display && (loading ? <LoadingComponent /> 
         : <Line 
           style={{height: "100px", width: "100px", marginTop: "20px"}} 

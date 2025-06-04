@@ -40,7 +40,7 @@ export default function UpdateCategory() {
             />
           </svg>
           <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
-            Update Product Category
+            Cập nhật danh mục sản phẩm
           </h2>
         </div>
 
@@ -51,7 +51,7 @@ export default function UpdateCategory() {
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-700">
-                  Name
+                  Tên
                 </label>
                 <div className="mt-1">
                   <input
@@ -69,7 +69,7 @@ export default function UpdateCategory() {
                   <button
                     type="submit"
                     className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    Update Category
+                    Cập nhật
                   </button>
                 )}
               </div>
@@ -90,7 +90,7 @@ export default function UpdateCategory() {
                   <Link
                     to="/admin/add-brand"
                     className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50">
-                    Add Brand
+                    Thêm thương hiệu
                   </Link>
                 </div>
 
@@ -99,7 +99,7 @@ export default function UpdateCategory() {
                     <Link
                       to="/admin/add-color"
                       className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50">
-                      Add Color
+                      Thêm màu
                     </Link>
                   </div>
                 </div>
@@ -109,7 +109,7 @@ export default function UpdateCategory() {
                     <Link
                       to="/admin/add-category"
                       className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50">
-                      Add Category
+                      Thêm danh mục
                     </Link>
                   </div>
                 </div>

@@ -1,5 +1,5 @@
 import User from "../model/User.js";
-import bcrypt from "bcryptjs";
+import bcrypt from "bcrypt";
 import asyncHandler from "express-async-handler";
 import generateToken from "../utils/generateToken.js";
 import Product from "../model/Product.js";
@@ -46,7 +46,6 @@ export const loginUserCtrl = asyncHandler(async (req, res) => {
 	const { email, password } = req.body;
 
 	const userFound = await User.findOne({ email });
-
 	if (userFound && (await bcrypt.compare(password, userFound && userFound.password))) {
 		res.json({
 			status: "success",

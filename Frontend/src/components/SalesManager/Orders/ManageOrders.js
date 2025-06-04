@@ -98,11 +98,11 @@ export default function ManageOrdersSM() {
     <div className="mt-5 mx-auto max-w-7xl sm:px-2 lg:px-8">
             <div className="mx-auto max-w-2xl px-4 lg:max-w-4xl lg:px-0">
               <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-                Manage Orders
+                Quản lý đơn hàng
               </h1>
               <p className="mt-2 text-sm text-gray-500">
-                Check the status of recent orders, manage returns, and discover
-                similar products.
+                Kiểm tra trạng thái của các đơn hàng gần đây, quản lý việc trả hàng và khám phá
+                các sản phẩm tương tự.
               </p>
             </div>
           </div>
@@ -124,7 +124,7 @@ export default function ManageOrdersSM() {
                         <dl className="grid flex-1 grid-cols-2 gap-x-6 text-sm sm:col-span-3 sm:grid-cols-3 lg:col-span-2">
                           <div>
                             <dt className="font-medium text-gray-900">
-                              Order number
+                              Số đơn hàng
                             </dt>
                             <dd className="mt-1 text-gray-500">
                               {order?.orderNumber}
@@ -132,7 +132,7 @@ export default function ManageOrdersSM() {
                           </div>
                           <div>
                             <dt className="font-medium text-gray-900">
-                              Order Owner
+                              Chủ sở hữu đơn hàng
                             </dt>
                             <dd className="mt-1 text-gray-500">
                               {order?.user?.fullname}
@@ -140,7 +140,7 @@ export default function ManageOrdersSM() {
                           </div>
                           <div className="hidden sm:block">
                             <dt className="font-medium text-gray-900">
-                              Date placed
+                              Ngày đặt
                             </dt>
                             <dd className="mt-1 text-gray-500">
                               <time dateTime={order.createdDatetime}>
@@ -150,7 +150,7 @@ export default function ManageOrdersSM() {
                           </div>
                           <div>
                             <dt className="font-medium text-gray-900">
-                              Total amount
+                              Tổng số tiền
                             </dt>
                             <dd className="mt-1 font-medium text-gray-900">
                               $ {order.totalPrice}
@@ -173,7 +173,7 @@ export default function ManageOrdersSM() {
                         {/* payment method */}
                         <div>
                           <dt className="font-medium text-gray-900">
-                            Payment Method
+                            Phương thức thanh toán
                           </dt>
                           <dd className="mt-1 font-medium text-gray-900">
                             {order?.paymentMethod}
@@ -233,7 +233,7 @@ export default function ManageOrdersSM() {
                                 </p>
                                
                          <p className="mt-2 text-sm font-medium text-gray-900">
-                          Price: ${product.price}
+                          Giá: ${product.price}
                          </p>
                          <p className="mt-2 text-sm font-medium text-gray-900">
                           x {product.qty}
@@ -249,7 +249,7 @@ export default function ManageOrdersSM() {
                                   aria-hidden="true"
                                 />
                                 <p className="ml-2 text-sm font-medium text-gray-500">
-                                  Status {order.status}
+                                  Trạng thái {order.status}
                                 </p>
                               </div>
                               {/* payment status icon */}
@@ -268,7 +268,7 @@ export default function ManageOrdersSM() {
                                     d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                                 <p className="ml-2 text-sm font-medium text-gray-500">
-                                  Payment Status: {order.paymentStatus}
+                                    Trạng thái thanh toán: {order.paymentStatus}
                                 </p>
                               </div>
 

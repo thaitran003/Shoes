@@ -125,13 +125,6 @@ export default function Navbar() {
                   {categoriesToDisplay?.length <= 0 ? (
                     <>
                       <Link
-                        to="/products?category=clothing"
-                        className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
-                      >
-                        Clothing
-                      </Link>
-
-                      <Link
                         to="/"
                         className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
                       >
@@ -174,7 +167,7 @@ export default function Navbar() {
                           to="/register"
                           className="-m-2 block p-2 font-medium text-gray-900"
                         >
-                          Create an account
+                          Tạo tài khoản
                         </Link>
                       </div>
                       <div className="flow-root">
@@ -182,7 +175,7 @@ export default function Navbar() {
                           to="/login"
                           className="-m-2 block p-2 font-medium text-gray-900"
                         >
-                          Sign in
+                          Đăng ký
                         </Link>
                       </div>
                     </>
@@ -226,7 +219,7 @@ export default function Navbar() {
                         to="/register"
                         className="text-sm font-medium text-white hover:text-gray-100"
                       >
-                        Create an account
+                       Tạo tài khoản
                       </Link>
                       <span
                         className="h-6 w-px bg-gray-600"
@@ -236,7 +229,7 @@ export default function Navbar() {
                         to="/login"
                         className="text-sm font-medium text-white hover:text-gray-100"
                       >
-                        Sign in
+                        Đăng nhập
                       </Link>
                     </>
                   )}
@@ -269,17 +262,10 @@ export default function Navbar() {
                         to="/products-filters"
                         className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
                       >
-                        all
+                        Tất cả
                       </Link>
                         {categoriesToDisplay?.length <= 0 ? (
                           <>
-                            <Link
-                              to="/products?category=clothing"
-                              className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
-                            >
-                              Clothing
-                            </Link>
-
                             <Link
                               to="/"
                               className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"

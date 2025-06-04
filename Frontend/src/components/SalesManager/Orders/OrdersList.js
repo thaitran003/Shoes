@@ -5,18 +5,8 @@ import { fetchOrdersAction } from "../../../redux/slices/orders/ordersSlices";
 import ErrorMsg from "../../ErrorMsg/ErrorMsg";
 import LoadingComponent from "../../LoadingComp/LoadingComponent";
 import NoDataFound from "../../NoDataFound/NoDataFound";
-import SuccessMsg from "../../SuccessMsg/SuccessMsg";
 import OrdersStats from "./OrdersStatistics";
 
-const people = [
-  {
-    name: "Lindsay Walton",
-    title: "Front-end Developer",
-    email: "lindsay.walton@example.com",
-    role: "Member",
-  },
-  // More people...
-];
 
 export default function OrdersList() {
   //dispatch
@@ -40,7 +30,7 @@ export default function OrdersList() {
         <OrdersStats />
 
         <h3 className="text-lg font-medium leading-6 text-gray-900 mt-3">
-          Recent Orders
+          Đơn hàng gần đây
         </h3>
         <div className="-mx-4 mt-3  overflow-hidden shadow ring-1 ring-black ring-opacity-5 sm:-mx-6 md:mx-0 md:rounded-lg">
           <table className="min-w-full divide-y divide-gray-300">
@@ -49,33 +39,33 @@ export default function OrdersList() {
                 <th
                   scope="col"
                   className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">
-                  Order ID
+                  Mã đơn hàng
                 </th>
                 <th
                   scope="col"
                   className="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 lg:table-cell">
-                  Payment Status
+                  Trạng thái thanh toán
                 </th>
                 <th
                   scope="col"
                   className="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 sm:table-cell">
-                  Oder Date
+                  Ngày đặt hàng
                 </th>
                 <th
                   scope="col"
                   className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                  Delivery Date
+                  Ngày giao hàng
                 </th>
                 <th
                   scope="col"
                   className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                  Status
+                  Trạng thái
                 </th>
 
                 <th
                   scope="col"
                   className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                  Total
+                  Tổng
                 </th>
                 {/* <th scope="col" className="relative py-3.5 pl-3 pr-4 sm:pr-6">
                 <span className="sr-only">Edit</span>
@@ -106,7 +96,7 @@ export default function OrdersList() {
                       {new Date(order?.createdAt).toLocaleDateString()}
                     </td>
                     <td className="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell">
-                      Unknown
+                      Không rõ
                     </td>
                     <td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">
                       {order?.status}
@@ -119,13 +109,13 @@ export default function OrdersList() {
                         <Link
                           style={{ cursor: "not-allowed" }}
                           className="text-gray-300">
-                          Edit
+                          Chỉnh sửa
                         </Link>
                       ) : (
                         <Link
                           to={`/admin/orders/${order?._id}`}
                           className="text-indigo-600 hover:text-indigo-900">
-                          Edit
+                          Chỉnh sửa
                         </Link>
                       )}
                     </td>

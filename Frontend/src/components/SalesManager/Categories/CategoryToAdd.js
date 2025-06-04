@@ -21,7 +21,7 @@ export default function CategoryToAdd() {
             />
           </svg>
           <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
-            Select Option
+            Tùy chọn
           </h2>
         </div>
 
@@ -32,7 +32,7 @@ export default function CategoryToAdd() {
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-700">
-                  Name
+                  Tên
                 </label>
                 <div className="mt-1">
                   <input
@@ -59,7 +59,7 @@ export default function CategoryToAdd() {
                   <Link
                     to="/admin/add-brand"
                     className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50">
-                    Add Brand
+                    Thêm thương hiệu
                   </Link>
                 </div>
 
@@ -68,7 +68,7 @@ export default function CategoryToAdd() {
                     <Link
                       to="/admin/add-color"
                       className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50">
-                      Add Color
+                      Thêm màu
                     </Link>
                   </div>
                 </div>
@@ -78,7 +78,7 @@ export default function CategoryToAdd() {
                     <Link
                       to="/admin/add-category"
                       className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50">
-                      Add Category
+                      Thêm danh mục
                     </Link>
                   </div>
                 </div>

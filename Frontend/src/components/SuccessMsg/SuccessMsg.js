@@ -7,7 +7,7 @@ const SuccessMsg = ({ message }) => {
   const dispatch = useDispatch();
   Swal.fire({
     icon: "success",
-    title: "Good job!",
+    title: "Thành công!",
     text: message,
   });
   dispatch(resetSuccessAction());

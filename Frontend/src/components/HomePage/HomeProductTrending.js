@@ -32,13 +32,13 @@ const HomeProductTrending = () => {
             <h2
               id="favorites-heading"
               className="text-2xl font-bold tracking-tight text-gray-900">
-              Best Selling Products
+              Sản phẩm bán chạy nhất
             </h2>
             <a
               href="products-filters"
               className="hidden text-sm font-medium text-indigo-600 hover:text-indigo-500 md:block">
-              Shop the collection
-              <span aria-hidden="true"> &rarr;</span>
+              Mua sắm bộ sưu tập
+              <span aria-hidden="true"> →</span>
             </a>
           </div>
 
@@ -73,8 +73,8 @@ const HomeProductTrending = () => {
             <a
               href="#"
               className="font-medium text-indigo-600 hover:text-indigo-500">
-              Shop the collection
-              <span aria-hidden="true"> &rarr;</span>
+              Mua sắm bộ sưu tập
+              <span aria-hidden="true"> →</span>
             </a>
           </div>
         </div>

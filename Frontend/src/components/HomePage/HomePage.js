@@ -8,50 +8,50 @@ const isLoggedIn = user?.token ? true : false;
 
 const offers = [
   {
-    name: "Download the app",
-    description: "Get an exclusive $5 off code",
+    name: "Tải ứng dụng",
+    description: "Nhận mã giảm giá độc quyền $5",
     href: "#",
   },
   {
-    name: "Return when you're ready",
-    description: "60 days of free returns",
+    name: "Đổi trả khi bạn sẵn sàng",
+    description: "Đổi trả miễn phí trong 60 ngày",
     href: "#",
   },
   {
-    name: "Sign up for our newsletter",
-    description: "15% off your first order",
+    name: "Đăng ký nhận bản tin của chúng tôi",
+    description: "Giảm 15% cho đơn hàng đầu tiên",
     href: "#",
   },
 ];
 
 const perks = [
   {
-    name: "Free returns",
+    name: "Đổi trả miễn phí",
     imageUrl:
       "https://tailwindui.com/img/ecommerce/icons/icon-returns-light.svg",
     description:
-      "Not what you expected? Place it back in the parcel and attach the pre-paid postage stamp.",
+      "Không như kỳ vọng? Đặt lại vào gói hàng và dán tem bưu điện trả trước.",
   },
   {
-    name: "Same day delivery",
+    name: "Giao hàng trong ngày",
     imageUrl:
       "https://tailwindui.com/img/ecommerce/icons/icon-calendar-light.svg",
     description:
-      "We offer a delivery service that has never been done before. Checkout today and receive your products within hours.",
+      "Chúng tôi cung cấp dịch vụ giao hàng chưa từng có. Thanh toán hôm nay và nhận sản phẩm trong vài giờ.",
   },
   {
-    name: "All year discount",
+    name: "Giảm giá quanh năm",
     imageUrl:
       "https://tailwindui.com/img/ecommerce/icons/icon-gift-card-light.svg",
     description:
-      'Looking for a deal? You can use the code "ALLYEAR" at checkout and get money off all year round.',
+      'Tìm kiếm ưu đãi? Bạn có thể sử dụng mã "ALLYEAR" khi thanh toán để được giảm giá quanh năm.',
   },
   {
-    name: "For the planet",
+    name: "Vì hành tinh",
     imageUrl:
       "https://tailwindui.com/img/ecommerce/icons/icon-planet-light.svg",
     description:
-      "We’ve pledged 1% of sales to the preservation and restoration of the natural environment.",
+      "Chúng tôi cam kết dành 1% doanh thu để bảo tồn và phục hồi môi trường tự nhiên.",
   },
 ];
 export default function Example() {
@@ -94,17 +94,17 @@ export default function Example() {
                 <div className="mx-auto max-w-2xl py-24 lg:max-w-none lg:py-64">
                   <div className="lg:pr-16">
                     <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">
-                    Be the change you wish to see in the world!
+                      Hãy trở thành sự thay đổi mà bạn muốn thấy trên thế giới!
                     </h1>
                     <p className="mt-4 text-xl text-gray-600">
-                      Starting with your shoe collection...
+                      Bắt đầu từ bộ sưu tập giày của bạn...
                     </p>
                     <div className="mt-6">
                       <a
                         href="products-filters"
                         className="inline-block rounded-md border border-transparent bg-indigo-600 py-3 px-8 font-medium text-white hover:bg-indigo-700"
                       >
-                        Step Into
+                        Bước vào
                       </a>
                     </div>
                   </div>
@@ -132,17 +132,16 @@ export default function Example() {
                 id="sale-heading"
                 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl"
               >
-                Get 25% off during our one-time sale
+                Nhận giảm giá 25% trong đợt khuyến mãi duy nhất
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-xl text-gray-600">
-                Most of our products are limited releases that won't come back.
-                Get your favorite items while they're in stock.
+                Hầu hết các sản phẩm của chúng tôi là phiên bản giới hạn và sẽ không trở lại. Hãy sở hữu các món đồ yêu thích của bạn khi còn hàng.
               </p>
               <a
                 href="#"
                 className="mt-6 inline-block w-full rounded-md border border-transparent bg-gray-900 py-3 px-8 font-medium text-white hover:bg-gray-800 sm:w-auto"
               >
-                Get access to our one-time sale
+                Truy cập vào đợt khuyến mãi duy nhất của chúng tôi
               </a>
             </div>
           </section> */}
@@ -159,14 +158,14 @@ export default function Example() {
               id="category-heading"
               className="text-2xl font-bold tracking-tight text-gray-900"
             >
-              Shop by Category
+              Mua sắm theo danh mục
             </h2>
             <Link
               to="/all-categories"
               className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block"
             >
-              Browse all categories
-              <span aria-hidden="true"> &rarr;</span>
+              Xem tất cả danh mục
+              <span aria-hidden="true"> →</span>
             </Link>
           </div>
           {/* home categories */}
@@ -181,7 +180,7 @@ export default function Example() {
           className="border-t border-gray-200 bg-gray-50"
         >
           <h2 id="perks-heading" className="sr-only">
-            Our perks
+            Các đặc quyền của chúng tôi
           </h2>
 
           <div className="mx-auto max-w-7xl py-24 px-4 sm:px-6 sm:py-32 lg:px-8">

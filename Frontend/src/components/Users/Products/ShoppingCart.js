@@ -75,13 +75,13 @@ export default function ShoppingCart() {
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 pt-16 pb-24 sm:px-6 lg:max-w-7xl lg:px-8">
         <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          Shopping Cart
+          Giỏ hàng
         </h1>
         
         <div className="mt-12 lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12 xl:gap-x-16">
           <section aria-labelledby="cart-heading" className="lg:col-span-7">
             <h2 id="cart-heading" className="sr-only">
-              Items in your shopping cart
+              Các mặt hàng trong giỏ hàng của bạn
             </h2>
 
             <ul
@@ -169,7 +169,7 @@ export default function ShoppingCart() {
     <Link
       to="/"
       className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
-      Your cart is empty. Step up your shoe game today!
+        Giỏ hàng của bạn đang trống. Hãy sắm cho mình đôi giày ngay hôm nay!
       <span aria-hidden="true"> &rarr;</span>
     </Link>
   </div>

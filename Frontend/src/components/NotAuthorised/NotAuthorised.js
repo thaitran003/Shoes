@@ -15,16 +15,16 @@ export default function NotAuthorised() {
             <div className="text-center">
               <p className="text-base font-semibold text-indigo-600">404</p>
               <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                Sorry, operation not allowed
+                Xin lỗi, hoạt động không được phép
               </h1>
               <p className="mt-2 text-base text-gray-500">
-                Login or create account to continue
+                Đăng nhập hoặc tạo tài khoản để tiếp tục
               </p>
               <div className="mt-6">
                 <Link
                   to="/login"
                   className="text-base font-medium text-indigo-600 hover:text-indigo-500">
-                  Login
+                    Đăng nhập
                   <span aria-hidden="true"> &rarr;</span>
                 </Link>
               </div>
@@ -36,7 +36,7 @@ export default function NotAuthorised() {
             <Link
               to="/"
               className="text-sm font-medium text-gray-500 hover:text-gray-600">
-              Go Home
+              Trở về trang chủ
             </Link>
           </nav>
         </footer>

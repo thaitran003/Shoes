@@ -502,12 +502,12 @@ export default function ProductsFilters() {
               {/* Other filter components */}
               <button
               className="w-full rounded-md border border-transparent bg-gray-600 py-3 px-4 text-base font-medium text-white shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
-               onClick={resetFilters}>Reset Filters</button>
+               onClick={resetFilters}>Bỏ lọc</button>
             </div>
             <div>
                 <input
                   type="text"
-                  placeholder="Search anything"
+                  placeholder="Tìm kiếm"
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
                   style={{
@@ -522,7 +522,7 @@ export default function ProductsFilters() {
             </div>
 
             <h1 className="text-3xl font-bold tracking-tight text-gray-900">
-                Our New Shoe Collection
+                Bộ sưu tập giày
             </h1>
             {/* sort */}
             <div className="flex items-center">
@@ -586,7 +586,7 @@ export default function ProductsFilters() {
                 type="button"
                 className="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden"
                 onClick={() => setMobileFiltersOpen(true)}>
-                <span className="sr-only">Filters</span>
+                <span className="sr-only">Lọc</span>
                 <FunnelIcon className="h-5 w-5" aria-hidden="true" />
               </button>
             </div>
@@ -594,13 +594,13 @@ export default function ProductsFilters() {
 
           <section aria-labelledby="products-heading" className="pt-6 pb-24">
             <h2 id="products-heading" className="sr-only">
-              Products
+              Sản phẩm 
             </h2>
 
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
               {/* Desktop  Filters */}
               <form className="hidden lg:block">
-                <h3 className="sr-only">Categories</h3>
+                <h3 className="sr-only">Danh mục</h3>
 
                 {/* colors categories Desktop section */}
                 <Disclosure
@@ -612,7 +612,7 @@ export default function ProductsFilters() {
                       <h3 className="-mx-2 -my-3 flow-root">
                         <Disclosure.Button className="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500">
                           <span className="font-medium text-gray-900">
-                            Colors
+                            Màu
                           </span>
                           <span className="ml-6 flex items-center">
                             {open ? (
@@ -687,7 +687,7 @@ export default function ProductsFilters() {
                       <h3 className="-mx-2 -my-3 flow-root">
                         <Disclosure.Button className="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500">
                           <span className="font-medium text-gray-900">
-                            Price
+                            Giá
                           </span>
                           <span className="ml-6 flex items-center">
                             {open ? (
@@ -736,7 +736,7 @@ export default function ProductsFilters() {
                       <h3 className="-mx-2 -my-3 flow-root">
                         <Disclosure.Button className="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500">
                           <span className="font-medium text-gray-900">
-                            Brand
+                            Thương hiệu
                           </span>
                           <span className="ml-6 flex items-center">
                             {open ? (
@@ -785,7 +785,7 @@ export default function ProductsFilters() {
                       <h3 className="-mx-2 -my-3 flow-root">
                         <Disclosure.Button className="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500">
                           <span className="font-medium text-gray-900">
-                            Size
+                            Kích cỡ
                           </span>
                           <span className="ml-6 flex items-center">
                             {open ? (

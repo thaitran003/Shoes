@@ -51,16 +51,16 @@ const Login = () => {
             <div className="w-full md:w-4/6 px-4">
               <div className="lg:max-w-3xl mx-auto py-20 px-4 md:px-10 lg:px-20">
                 <h3 className="mb-8 text-4xl md:text-5xl font-bold font-heading">
-                  Login to your account
+                  Đăng nhập vào tài khoản của bạn
                 </h3>
                 <p className="mb-10 font-semibold font-heading">
-                  Step into your account and step up your style game!
+                  Hãy vào tài khoản của bạn và nâng cao phong cách của mình!
                 </p>
                 {/* err */}
                 {error && 
                 <div className="mb-5">
                 <p1 style={{color: 'red', fontWeight: 'bold'}}>
-                Please check your login credentials</p1>
+                Vui lòng kiểm tra thông tin đăng nhập của bạn</p1>
                 </div>
                 }
 
@@ -71,7 +71,7 @@ const Login = () => {
                   <div className="w-full md:w-1/2 px-4 mb-8 md:mb-12">
                     <label>
                       <h4 className="mb-5 text-gray-400 uppercase font-bold font-heading">
-                        Your Email
+                        Email của bạn
                       </h4>
                       <input
                         name="email"
@@ -85,7 +85,7 @@ const Login = () => {
                   <div className="w-full md:w-1/2 px-4 mb-12">
                     <label>
                       <h4 className="mb-5 text-gray-400 uppercase font-bold font-heading">
-                        Password
+                        Mật khẩu
                       </h4>
                       <input
                         name="password"
@@ -103,14 +103,14 @@ const Login = () => {
                     ) : (
                       <>
                         <button className="bg-blue-800 hover:bg-blue-900 text-white font-bold font-heading py-5 px-8 rounded-md uppercase">
-                          Login
+                          Đăng nhập
                         </button>
                         
                         <button
                           className="bg-red-800 hover:bg-red-900 text-white font-bold font-heading py-5 px-8 rounded-md uppercase ml-4"
                           onClick={() => window.location.href = "/register"}
                         >
-                          Register
+                          Đăng ký
                         </button>
                       </>
                     )}
