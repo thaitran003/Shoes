@@ -175,9 +175,7 @@ const AddShippingAddress = () => {
                 onChange={onChange}
                 className="block w-full rounded-md border-gray-300 p-2 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                 <option value="" disabled>Select Country</option>
-                <option value="TR">Türkiye</option>
-                <option value="HK">Hong Kong</option>
-                <option value="USA">United States</option>
+                <option value="VN">Viet Nam</option>
               </select>
             </div>
           </div>

@@ -16,6 +16,7 @@ import * as dotenv from "dotenv";
 import smRouter from "../routes/smRoute.js";
 import pmRouter from "../routes/pmRoute.js";
 import refundRouter from "../routes/refundRoute.js";
+import paymentRoute from "../routes/paymentRoute.js";
 dotenv.config();
 
 //db connect
@@ -46,6 +47,7 @@ app.use("/api/v1/colors/", colorRouter);
 app.use("/api/v1/genders/", genderRouter);
 app.use("/api/v1/reviews/", reviewRouter);
 app.use("/api/v1/orders/", orderRouter);
+app.use("/api/v1/payments/", paymentRoute);
 app.use("/api/v1/refund/", refundRouter);
 app.use("/api/v1/pm/", pmRouter);
 app.use("/api/v1/sm/", smRouter);

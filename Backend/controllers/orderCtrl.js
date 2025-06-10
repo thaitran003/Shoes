@@ -49,26 +49,9 @@ export const createOrderCtrl = asyncHandler(async (req, res) => {
 	user.orders.push(order?._id);
 	await user.save();
 
-	const sessionUrl = await takePayment(orderItems, order);
+	// invoiceTemplate(order, user);
 
-	invoiceTemplate(order, user);
-
-	const mailOptions = {
-		from: process.env.EMAIL,
-		to: user.email,
-		subject: "Your Order Details",
-		text: "Please find attached your order details.",
-		attachments: [
-			{
-				filename: "./pdfs/" + order._id + ".pdf",
-				path: "./pdfs/" + order._id + ".pdf",
-			},
-		],
-	};
-
-	sendMail(mailOptions);
-
-	res.send({ url: sessionUrl });
+	res.send(order);
 });
 
 //@desc get all orders

@@ -21,21 +21,21 @@ const initialState = {
 };
 
 //create product action
+// Create order action
 export const placeOrderAction = createAsyncThunk(
-  "order/place-order",
+  'order/place-order',
   async (payload, { rejectWithValue, getState, dispatch }) => {
     try {
       const { orderItems, shippingAddress, totalPrice } = payload;
-      //token
       const token = getState()?.users?.userAuth?.userInfo?.token;
       const config = {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       };
-      
-      //request
-      const { data } = await axios.post(
+
+      // Place order
+      const { data: orderData } = await axios.post(
         `${baseURL}/orders`,
         {
           orderItems,
@@ -44,13 +44,32 @@ export const placeOrderAction = createAsyncThunk(
         },
         config
       );
-      return window.open(data?.url);
+
+      // Extract orderId and orderNumber
+      console.log("orderData",orderData)
+      const { _id: orderId, orderNumber } = orderData;
+
+      // Call VietQR API to generate QR code
+      const { data: qrData } = await axios.post(
+        `${baseURL}/payments/qr`,
+        {
+          orderId,
+          orderNumber,
+          amount: totalPrice,
+          currency: 'VND',
+        },
+        config
+      );
+
+      return {
+        order: orderData,
+        qrCodeUrl: qrData.qrCodeUrl,
+      };
     } catch (error) {
-      return rejectWithValue(error?.response?.data);
+      return rejectWithValue(error?.response?.data || { message: 'Failed to place order or generate QR code' });
     }
   }
 );
-
 //fetch products action
 export const fetchOrdersAction = createAsyncThunk(
   "orders/list",
@@ -118,6 +137,18 @@ export const OrdersStatsAction = createAsyncThunk(
     }
   }
 );
+// Clear QR code action
+export const clearQRCodeAction = createAsyncThunk(
+  'orders/clear-qr',
+  async (_, { rejectWithValue }) => {
+    try {
+      return null; // Simply return null to clear qrCodeUrl
+    } catch (error) {
+      return rejectWithValue(error?.message);
+    }
+  }
+);
+
 
 //fetch product action
 export const fetchOderAction = createAsyncThunk(
@@ -218,17 +249,19 @@ const ordersSlice = createSlice({
   initialState,
   extraReducers: (builder) => {
     //create
-    builder.addCase(placeOrderAction.pending, (state) => {
+     builder.addCase(placeOrderAction.pending, (state) => {
       state.loading = true;
     });
     builder.addCase(placeOrderAction.fulfilled, (state, action) => {
       state.loading = false;
-      state.order = action.payload;
+      state.order = action.payload.order;
+      state.qrCodeUrl = action.payload.qrCodeUrl; // Store QR code URL
       state.isAdded = true;
     });
     builder.addCase(placeOrderAction.rejected, (state, action) => {
       state.loading = false;
       state.order = null;
+      state.qrCodeUrl = null; // Reset QR code URL on error
       state.isAdded = false;
       state.error = action.payload;
     });
@@ -244,6 +277,10 @@ const ordersSlice = createSlice({
       state.loading = false;
       state.orders = null;
       state.error = action.payload;
+    });
+    builder.addCase(clearQRCodeAction.fulfilled, (state) => {
+      state.qrCodeUrl = null;
+      state.isAdded = false;
     });
     //stats
     builder.addCase(OrdersStatsAction.pending, (state) => {
@@ -315,9 +352,10 @@ const ordersSlice = createSlice({
       state.isDeleted = false;
     });
     //reset success
-    builder.addCase(resetSuccessAction.pending, (state, action) => {
+     builder.addCase(resetSuccessAction.pending, (state) => {
       state.isAdded = false;
       state.isDeleted = false;
+      state.qrCodeUrl = null; // Clear QR code URL
     });
   },
 });
