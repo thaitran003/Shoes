@@ -7,7 +7,7 @@ export const paymentQrCtrl = asyncHandler(async (req, res) => {
           currency 
         } = req.body;
 
-    const amountVND = amount * 23000;
+    const amountVND = amount;
     res.json({
         status: "success",
         message: "brand updated successfully",
